@@ -35,11 +35,19 @@ def reduce_list(numbers_list):
   print("numbers_list:", numbers_list)
   uniqueNumbers=set(numbers_list)
   print("Set of uniqueNumbers:",uniqueNumbers)
-  print(set(numbers_list))
-  
-def kick_high(numbers_list):
-  y=numbers_list.remove(max(uniqueNumbers))
-  print(y)
+  return uniqueNumbers
+print(set(numbers_list))
+
+reduce = reduce_list(numbers_list)
+print(f"the list is{reduce}")
+reduce = list(reduce)
+print(f"the list is{reduce}")
+def kick_high(reduce):
+  reduce.remove(max(reduce))
+  print(f"the final list is {reduce}")
+  # return y
+
+kick_high(reduce)
 
 
   
