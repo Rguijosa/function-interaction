@@ -1,53 +1,57 @@
 #   Interactions Between Functions Practice #1
 # Create a function (throw_dice) that "throws" two random dice and returns its results (the function MUST RETURN TWO VALUES AS A RESULT, both of which must be between 1 and 6, randomly).
-from random import randint
-def throw_dice():
-  die1 = randint(1,7)
+# from random import randint
+# def throw_dice():
+#   die1 = randint(1,7)
   
-  die2 = randint(1,7)
-  return die1, die2
+#   die2 = randint(1,7)
+#   return die1, die2
 
-dices = throw_dice()
-print(dices)
+# die1, die2 = throw_dice()
+# print(die1, die2)
 
-# Pass the result of these two dice to a function called roll_result (meaning that this second function MUST RECEIVE TWO ARGUMENTS) and return -without printing it- a certain message according to the what the sum of these values results:
-def rolled_dices(die1,die2):
-  sum_dice= die1 + die2
-  print(sum_dice)
-  if sum_dice <=6:
-    print(f"The sum of your dice is {sum_dice}. Unfortunate")
-  elif sum_dice>6 and sum_dice<10:
-    print(f"The sum of your dice is {sum_dice}. You have a good chance")
-  else sum_dice>=10:
-    print(f"The sum of your dice is {sum_dice}. It looks like a winning roll")
+# # Pass the result of these two dice to a function called roll_result (meaning that this second function MUST RECEIVE TWO ARGUMENTS) and return -without printing it- a certain message according to the what the sum of these values results:
 
-
-
-
-
-
-
-
-
-# If the sum is greater than or equal to 10:
-
-# "The sum of your dice is {sum_dice}. It looks like a winning roll"
-
-# Hint: use the random library's choice or randint method to choose a random value between 1 and 6.
-
-#   "The sum of your dice is {suma_dados}. Unfortunate"
-# "The sum of your dice is {suma_dados}. You have a good chance"
-# "The sum of your dice is {sum_dice}. It looks like a winning roll"
-
-
-
-
-  
+# def rolled_dices(die1, die2):
+#   sum_dice= die1+ die2
+#   if sum_dice <=6:
+#     print(f"The sum of your dice is {sum_dice}. Unfortunate")
+#   elif sum_dice > 6 and sum_dice<10:
+#     print(f"The sum of your dice is {sum_dice}. You have a good chance")
+#   else:
+#     print(f"The sum of your dice is {sum_dice}. It looks like a winning roll")
+    
+# rolled_dices(die1, die2)
 #####################################################################################################
+# return it as a list
+# print out lowest to highest
+# remove duplicates
+# reomove higgest value
 
 # Interactions Between Functions Practice #2
 # Create a function called reduce_list() that takes a list (numbers) as an argument, and returns also a list, but removing duplicates (leaving only one of the numbers if there are duplicates) and removing the highest value. The order of the elements can be changed.
+numbers_list=[1,3,4,16,3,14,5,6,3]
+def reduce_list(numbers_list):
+  print("numbers_list:", numbers_list)
+  uniqueNumbers=set(numbers_list)
+  print("Set of uniqueNumbers:",uniqueNumbers)
+  print(set(numbers_list))
+  
+def kick_high(numbers_list):
+  y=numbers_list.remove(max(uniqueNumbers))
+  print(y)
 
+
+  
+
+
+
+
+  
+
+  
+  
+  
 # For example, if given the list [1,2,15,7,2] it should return [1,2,7].
 
 # Create a function called average() that can receive as an argument the list returned by the previous function, and that calculates the average of its values. It should return the result (a float), without printing it.
